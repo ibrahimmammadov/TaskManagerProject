@@ -4,6 +4,7 @@
 - Add command line: **add-migration firstmigration**
 - Add command line: **update-database**
 - Done!
+- Ignore docker-compose files. They are not working properly.
 <br/>
 <br/>
 <br/>
