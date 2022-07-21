@@ -9,5 +9,6 @@
 <br/>
 
 - I have created simple UI in order to managing user stories.
-- You can add user after creating company. Morover you can sign in as Company(symbolizes Admin) 
+- Begin with create a Company and User. After that, project will available all features for testing.
+- You can add User after creating Company. Morover you can sign in as Company(symbolizes Admin) 
  and User (symbolizes  BasicUser) from *Home/Signin* page.
