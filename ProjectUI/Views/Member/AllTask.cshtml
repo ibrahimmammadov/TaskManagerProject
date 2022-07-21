@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Member/_Member.cshtml";
+}
+
+@model IList<ProjectUI.Models.Tasks>
+
+    <h3>All Tasks</h3>
+         <table class="table table-dark table-hover">
+               <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Tittle</th>
+      <th scope="col">Description</th>
+      <th scope="col">Deadline  </th>
+      <th scope="col">Status</th>
+    </tr>
+  </thead>
+             @foreach (var tasks in Model)
+    {
+
+  <tbody>
+    <tr>
+      <th scope="row">@tasks.Id</th>
+      <td>@tasks.Tittle</td>
+      <td>@tasks.Description</td>
+      <td>@tasks.Deadline</td>
+                @if(tasks.Status==1){<td>Active</td>} else{<td>Completed</td>}
+            </tr>
+  </tbody>
+    }
+</table>
+    

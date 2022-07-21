@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  taskmanagmentdb:
+   image: mcr.microsoft.com/mssql/server
+  taskmanagment.web:
+   image: taskmanagment_web_image
+   build:
+    context: .
+    dockerfile: ProjectUI/Dockerfile
+volumes:
+  taskmanagment_volume:

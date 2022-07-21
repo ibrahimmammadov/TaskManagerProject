@@ -1,0 +1,21 @@
+version: "3.9"
+services:
+  taskmanagmentdb:
+   container_name: taskmanagmentdb
+   restart: always
+   ports:
+    - "1433:1433"
+   volumes:
+    - taskmanagment_volume:/var/opt/mssql
+   environment:
+    - ACCEPT_EULA=Y
+    - SA_PASSWORD=baku@1784
+  taskmanagment.web:
+   container_name: taskmanagment.web
+   environment:
+    - ASPNETCORE_ENVIRONMENT=Development
+    - "ConnectionStrings.SqlConnection=Server=taskmanagmentdb,1433;Database=TaskManagerPrj;User=sa; Password=baku@1784"
+   ports:
+    - "7186:80"
+   depends_on:
+    - taskmanagmentdb
